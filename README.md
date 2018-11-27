@@ -24,7 +24,10 @@ Software Specialties
 
 ## TODO's
 
-WIP
+* Write the code
+* Make the UML
+* Write documentation
+* Make presentation 
 
 ---
 
