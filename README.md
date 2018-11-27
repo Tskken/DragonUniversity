@@ -30,7 +30,15 @@ WIP
 
 ## Design Paterns
 
-WIP
+1. Stratigy:
+    * Basic interface stucture
+2. Factory:
+    * Function wrapping for actions
+3. Observer:
+    * Joining and leaving classes which notify any one on wait list
+    * Message to students from teacher over service
+4. Command Patern:
+    * Actions with in classes and any other thing we may want
 
 ---
 
