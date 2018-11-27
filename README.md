@@ -4,6 +4,9 @@ Finn Jensen, Dylan Blanchard
 Deliverable 1: Project Concept
 Software Specialties
 
+---
+
+## Hopes and Dreams
 * The client is that of Dragon Online University
 * The Team Members and their email address
     - Finn Jensen,  finn.jensen@mymail.champlain.edu
@@ -16,3 +19,21 @@ Software Specialties
   - Design the UML 11/30
   - Finish the project 12/4
 * Communication between team members will be handled by email and encase of more immediate communication needed discord will be used.  In terms of code sharing a GitHub repository will be created.
+
+---
+
+## TODO's
+
+WIP
+
+---
+
+## Design Paterns
+
+WIP
+
+---
+
+## UML
+
+WIP
