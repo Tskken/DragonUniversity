@@ -33,14 +33,14 @@ Software Specialties
 
 ## Design Paterns
 
-1. Stratigy:
+1. Stratigy: (Finn)
     * Basic interface stucture
-2. Factory:
+2. Factory: (Finn)
     * Function wrapping for actions
-3. Observer:
+3. Observer: (Dylan)
     * Joining and leaving classes which notify any one on wait list
     * Message to students from teacher over service
-4. Command Patern:
+4. Command Patern: (Dylan)
     * Actions with in classes and any other thing we may want
 
 ---
