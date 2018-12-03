@@ -1,0 +1,1 @@
+#All code for strategy pattern will go in to this package
