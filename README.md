@@ -35,8 +35,8 @@ Software Specialties
 
 1. Stratigy: (Finn)
     * Basic interface stucture
-2. Factory: (Finn)
-    * Function wrapping for actions
+2. Momento: (Finn)
+    * Registra intigration
 3. Observer: (Dylan)
     * Joining and leaving classes which notify any one on wait list
     * Message to students from teacher over service
