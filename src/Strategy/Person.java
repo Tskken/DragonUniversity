@@ -25,8 +25,9 @@ public abstract class Person {
         this.age = age;
     }
 
-    public abstract void doAction(Command command);
+    public abstract void doAction(Command command, Class cl);
     public abstract void addClass(Class newClass);
     public abstract void removeClass(Class removedClass);
-    public abstract void grade();
+    public abstract Class getClass(String cl);
+    public abstract double grade(Person person, Class cl);
 }

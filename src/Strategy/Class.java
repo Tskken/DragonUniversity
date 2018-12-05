@@ -55,4 +55,24 @@ public class Class {
     public void setExersizes(ArrayList<Exersize> exersizes) {
         this.exersizes = exersizes;
     }
+
+    public void incStudentCount() {
+        this.studentCount++;
+    }
+
+    public double calculateGrade() {
+        double grade = 0.0;
+
+        if (this.exersizes.size() == 0) {
+            return 0.0;
+        }
+
+        for (Exersize exersize : exersizes) {
+            grade += exersize.getGrade();
+        }
+
+        grade /= this.exersizes.size();
+
+        return grade;
+    }
 }

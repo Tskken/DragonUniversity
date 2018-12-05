@@ -9,7 +9,8 @@ public class Faculty extends Person {
     private int employmentYears = 0;
     private ArrayList<Class> classes;
 
-    public Faculty() {
+    public Faculty(String name) {
+        this.setName(name);
         this.classes = new ArrayList<>();
     }
 
@@ -38,8 +39,8 @@ public class Faculty extends Person {
     }
 
     @Override
-    public void doAction(Command command) {
-        command.execute(this);
+    public void doAction(Command command, Class cl) {
+        command.execute(this, cl);
     }
 
     @Override
@@ -50,5 +51,20 @@ public class Faculty extends Person {
     @Override
     public void removeClass(Class removedClass) {
         this.classes.remove(removedClass);
+    }
+
+    @Override
+    public Class getClass(String cl) {
+        for (Class cla : classes) {
+            if (cla.getName().equals(cl)) {
+                return cla;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public double grade(Person person, Class cl) {
+        return 0;
     }
 }

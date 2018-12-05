@@ -7,7 +7,8 @@ public class Student extends Person {
     private int year = 0;
     private Transcript transcript;
 
-    public Student() {
+    public Student(String name) {
+        this.setName(name);
         this.transcript = new Transcript();
     }
 
@@ -40,8 +41,8 @@ public class Student extends Person {
     }
 
     @Override
-    public void doAction(Command command) {
-        command.execute(this);
+    public void doAction(Command command, Class cl) {
+        command.execute(this, cl);
     }
 
     @Override
@@ -52,5 +53,15 @@ public class Student extends Person {
     @Override
     public void removeClass(Class removedClass) {
         this.transcript.removeClass(removedClass);
+    }
+
+    @Override
+    public Class getClass(String cl) {
+        return this.transcript.getClass(cl);
+    }
+
+    @Override
+    public double grade(Person person, Class cl) {
+        return this.transcript.calculateGrade();
     }
 }

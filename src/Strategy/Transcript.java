@@ -18,5 +18,27 @@ public class Transcript {
         this.classes.remove(removeClass);
     }
 
-    
+    public Class getClass(String name) {
+        for (Class cl: this.classes) {
+            if (cl.getName() == name) {
+                return cl;
+            }
+        }
+
+        return null;
+    }
+
+    public double calculateGrade() {
+        if (this.classes.size() == 0) {
+            return this.totalGrade;
+        }
+
+        for (Class cl : this.classes) {
+            this.totalGrade += cl.calculateGrade();
+        }
+
+        this.totalGrade /= classes.size();
+
+        return this.totalGrade;
+    }
 }
