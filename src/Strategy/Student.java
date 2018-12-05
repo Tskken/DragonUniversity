@@ -5,11 +5,11 @@ import Command.Command;
 public class Student extends Person {
     private String major = "";
     private int year = 0;
-    private Transcript transcript;
+    private BasicTranscript basicTranscript;
 
     public Student(String name) {
         this.setName(name);
-        this.transcript = new Transcript();
+        this.basicTranscript = new BasicTranscript();
     }
 
     public String getMajor() {
@@ -36,8 +36,8 @@ public class Student extends Person {
         this.year++;
     }
 
-    public Transcript getTranscript() {
-        return this.transcript;
+    public BasicTranscript getBasicTranscript() {
+        return this.basicTranscript;
     }
 
     @Override
@@ -47,21 +47,22 @@ public class Student extends Person {
 
     @Override
     public void addClass(Class newClass) {
-        this.transcript.addClass(newClass);
+        this.basicTranscript.addClass(newClass);
+        newClass.incStudentCount();
     }
 
     @Override
     public void removeClass(Class removedClass) {
-        this.transcript.removeClass(removedClass);
+        this.basicTranscript.removeClass(removedClass);
     }
 
     @Override
     public Class getClass(String cl) {
-        return this.transcript.getClass(cl);
+        return this.basicTranscript.getClass(cl);
     }
 
     @Override
     public double grade(Person person, Class cl) {
-        return this.transcript.calculateGrade();
+        return this.basicTranscript.calculateGrade();
     }
 }
