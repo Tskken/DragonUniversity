@@ -2,7 +2,6 @@ package Observer;
 
 import Command.JoinClass;
 import Momento.Registra;
-import Strategy.BasicTranscript;
 import Strategy.Class;
 import Strategy.Student;
 import Strategy.Transcript;
@@ -29,8 +28,8 @@ public class StudentPortal implements Observer {
     @Override
     public void update(Registra registra) {
         Transcript transcript = registra.getStudentTranscript(student.getName());
-        student.setBasicTranscript(transcript);
+        student.setTranscript(transcript);
 
-        System.out.println(student.getName() + " currently updated to have this transcript: " + student.getBasicTranscript().toString());
+        System.out.println(student.getName() + " currently updated to have this transcript: " + student.getTranscript().toString());
     }
 }

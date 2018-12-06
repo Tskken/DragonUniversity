@@ -3,7 +3,6 @@ package core;
 import Command.JoinClass;
 import Momento.Caretaker;
 import Momento.Registra;
-import Momento.RegistraRecord;
 import Observer.StudentPortal;
 import Observer.TeacherPortal;
 import Strategy.*;
@@ -41,13 +40,13 @@ public class main {
         System.out.println("Create exsersize 3: " + exersize3.getName());
 
 
-        class1.addExsersive(exersize1);
+        class1.addExercise(exersize1);
         System.out.println("Added exersize1 to class 1: " + class1.getName() + " " + exersize1.getName());
 
-        class1.addExsersive(exersize3);
+        class1.addExercise(exersize3);
         System.out.println("Added exersize3 to class 1: " + class1.getName() + " " + exersize3.getName());
 
-        class2.addExsersive(exersize2);
+        class2.addExercise(exersize2);
         System.out.println("Added exersize2 to class 2: " + class2.getName() + " " + exersize2.getName());
 
         System.out.println("Exersizes for class 1: " + class1.getExersizes().toString());
