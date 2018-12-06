@@ -1,5 +1,8 @@
 package Observer;
 
+import Momento.Registra;
+import Strategy.Transcript;
+
 public interface Observer {
-    void update();
+    void update(Registra registra);
 }

@@ -18,7 +18,7 @@ public class BasicTranscript implements Transcript {
         this.classes.remove(removeClass);
     }
 
-    public Class getClass(String name) {
+    public Class getAClass(String name) {
         for (Class cl: this.classes) {
             if (cl.getName() == name) {
                 return cl;

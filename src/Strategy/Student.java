@@ -5,7 +5,7 @@ import Command.Command;
 public class Student extends Person {
     private String major = "";
     private int year = 0;
-    private BasicTranscript basicTranscript;
+    private Transcript basicTranscript;
 
     public Student(String name) {
         this.setName(name);
@@ -36,8 +36,12 @@ public class Student extends Person {
         this.year++;
     }
 
-    public BasicTranscript getBasicTranscript() {
+    public Transcript getBasicTranscript() {
         return this.basicTranscript;
+    }
+
+    public void setBasicTranscript(Transcript basicTranscript) {
+        this.basicTranscript = basicTranscript;
     }
 
     @Override
@@ -58,7 +62,7 @@ public class Student extends Person {
 
     @Override
     public Class getClass(String cl) {
-        return this.basicTranscript.getClass(cl);
+        return this.basicTranscript.getAClass(cl);
     }
 
     @Override

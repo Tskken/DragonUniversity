@@ -12,4 +12,8 @@ public class TranscriptList {
     public void addTranscript(Transcript transcript) {
         this.transcripts.add(transcript);
     }
+
+    public Transcript getFirstTranscript() {
+        return transcripts.get(0);
+    }
 }

@@ -75,4 +75,8 @@ public class Class {
 
         return grade;
     }
+
+    public void addExsersive(Exersize exersize) {
+        this.exersizes.add(exersize);
+    }
 }
