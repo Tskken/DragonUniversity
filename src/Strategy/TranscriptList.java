@@ -14,6 +14,13 @@ public class TranscriptList {
     }
 
     public Transcript getFirstTranscript() {
-        return transcripts.get(0);
+        return this.transcripts.get(this.transcripts.size() - 1);
+    }
+
+    @Override
+    public String toString() {
+        return "TranscriptList{" +
+                "transcripts=" + transcripts +
+                '}';
     }
 }

@@ -14,10 +14,23 @@ public class TeacherPortal implements Observable {
     public TeacherPortal(Faculty teacher, Registra registra) {
         this.teacher = teacher;
         this.registra = registra;
+        this.observers = new ArrayList<Observer>();
     }
 
-    public TeacherPortal() {
-        this.observers = new ArrayList<Observer>();
+    public Faculty getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Faculty teacher) {
+        this.teacher = teacher;
+    }
+
+    public Registra getRegistra() {
+        return registra;
+    }
+
+    public void setRegistra(Registra registra) {
+        this.registra = registra;
     }
 
     @Override

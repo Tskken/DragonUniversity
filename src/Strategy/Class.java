@@ -79,4 +79,15 @@ public class Class {
     public void addExsersive(Exersize exersize) {
         this.exersizes.add(exersize);
     }
+
+    @Override
+    public String toString() {
+        return "Class{" +
+                "name='" + name + '\'' +
+                ", studentCount=" + studentCount +
+                ", teacher=" + teacher +
+                ", classIdentifier='" + classIdentifier + '\'' +
+                ", exersizes=" + exersizes +
+                '}';
+    }
 }

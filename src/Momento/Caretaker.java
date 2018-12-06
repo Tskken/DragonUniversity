@@ -16,4 +16,11 @@ public class Caretaker {
     public ArrayList<RegistraRecord> getMomento() {
         return this.records;
     }
+
+    @Override
+    public String toString() {
+        return "Caretaker{" +
+                "records=" + records +
+                '}';
+    }
 }

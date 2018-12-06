@@ -15,4 +15,11 @@ public class RegistraRecord {
    private Map<String, TranscriptList> getState() {
         return this.transcriptMap;
    }
+
+    @Override
+    public String toString() {
+        return "RegistraRecord{" +
+                "transcriptMap=" + transcriptMap +
+                '}';
+    }
 }

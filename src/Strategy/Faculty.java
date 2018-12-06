@@ -67,4 +67,11 @@ public class Faculty extends Person {
     public double grade(Person person, Class cl) {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "department='" + department + '\'' +
+                '}';
+    }
 }

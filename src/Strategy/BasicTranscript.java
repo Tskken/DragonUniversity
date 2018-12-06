@@ -42,4 +42,12 @@ public class BasicTranscript implements Transcript {
 
         return this.totalGrade;
     }
+
+    @Override
+    public String toString() {
+        return "BasicTranscript{" +
+                "classes=" + classes +
+                ", totalGrade=" + totalGrade +
+                '}';
+    }
 }

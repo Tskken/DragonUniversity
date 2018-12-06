@@ -4,6 +4,8 @@ import Command.JoinClass;
 import Momento.Caretaker;
 import Momento.Registra;
 import Momento.RegistraRecord;
+import Observer.StudentPortal;
+import Observer.TeacherPortal;
 import Strategy.*;
 import Strategy.Class;
 
@@ -19,6 +21,9 @@ public class main {
         System.out.println("Created momento caretaker...");
         Registra registra = new Registra();
         System.out.println("Created registra...");
+
+        TeacherPortal teacherPortal = new TeacherPortal(teacher1, registra);
+        StudentPortal studentPortal = new StudentPortal(student1);
 
         Class class1 = new Class("testclass1", teacher1, "tc-01-00");
         System.out.println("Create class 1: " + class1.getName());
@@ -48,15 +53,23 @@ public class main {
         System.out.println("Exersizes for class 1: " + class1.getExersizes().toString());
         System.out.println("Exersizes for class 2: " + class2.getExersizes().toString());
 
-        teacher1.doAction(new JoinClass(), class1);
+        teacherPortal.addObserver(studentPortal);
+        teacherPortal.getTeacher().doAction(new JoinClass(), class1);
         System.out.println("Teacher 1 takes owner ship of class 1: " + teacher1.getClass(class1.getName()).getName());
 
-        teacher1.doAction(new JoinClass(), class2);
+        teacherPortal.getTeacher().doAction(new JoinClass(), class2);
         System.out.println("Teacher 1 takes owner ship of class 2: " + teacher1.getClass(class2.getName()).getName());
 
-        student1.doAction(new JoinClass(), class1);
+        studentPortal.getStudent().doAction(new JoinClass(), class1);
         System.out.println("Student 1 joins class 1: " + student1.getClass(class1.getName()).getName());
 
+        registra.addStudentTranscript(student1);
+
+        teacherPortal.notifyObserver();
+
         caretaker.addMomento(registra.createMomento());
+        System.out.println("Added current registra to caretaker to record...");
+
+        System.out.println("Caretaker is holding: " + caretaker.toString());
     }
 }

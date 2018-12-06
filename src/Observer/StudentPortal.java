@@ -14,6 +14,14 @@ public class StudentPortal implements Observer {
         this.student = student;
     }
 
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
     public void joinClass(Class cl) {
         this.student.doAction(new JoinClass(), cl);
     }
@@ -22,5 +30,7 @@ public class StudentPortal implements Observer {
     public void update(Registra registra) {
         Transcript transcript = registra.getStudentTranscript(student.getName());
         student.setBasicTranscript(transcript);
+
+        System.out.println(student.getName() + " currently updated to have this transcript: " + student.getBasicTranscript().toString());
     }
 }

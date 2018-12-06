@@ -1,6 +1,7 @@
 package Momento;
 
 import Strategy.BasicTranscript;
+import Strategy.Student;
 import Strategy.Transcript;
 import Strategy.TranscriptList;
 
@@ -32,5 +33,18 @@ public class Registra {
 
     public Transcript getStudentTranscript(String id) {
         return registraTranscript.get(id).getFirstTranscript();
+    }
+
+    public void addStudentTranscript(Student student) {
+        TranscriptList tl = this.registraTranscript.get(student.getName());
+        if (tl == null) {
+            TranscriptList transcriptList = new TranscriptList();
+            transcriptList.addTranscript(student.getBasicTranscript());
+            this.registraTranscript.put(student.getName(), transcriptList);
+            return;
+        }
+
+        tl.addTranscript(student.getBasicTranscript());
+        this.registraTranscript.put(student.getName(), tl);
     }
 }
