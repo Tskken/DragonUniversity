@@ -9,6 +9,11 @@ public class Quiz implements Exersize {
     }
 
     @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public void setGrade(double grade) {
         this.grade = grade;
     }
@@ -16,5 +21,12 @@ public class Quiz implements Exersize {
     @Override
     public double getGrade() {
         return this.grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Quiz{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
