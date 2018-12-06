@@ -24,9 +24,9 @@ Software Specialties
 
 ## TODO's
 
-* ~~Write the code
+* ~~Write the code~~
 * Code fixes??? maybe???
-* ~~Make the UML
+* ~~Make the UML~~
 * Write documentation
 * Make presentation 
 
