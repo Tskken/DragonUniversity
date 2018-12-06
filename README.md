@@ -24,8 +24,9 @@ Software Specialties
 
 ## TODO's
 
-* Write the code
-* Make the UML
+* ~~Write the code
+* Code fixes??? maybe???
+* ~~Make the UML
 * Write documentation
 * Make presentation 
 
@@ -42,9 +43,3 @@ Software Specialties
     * Message to students from teacher over service
 4. Command Patern: (Dylan)
     * Actions with in classes and any other thing we may want
-
----
-
-## UML
-
-WIP
